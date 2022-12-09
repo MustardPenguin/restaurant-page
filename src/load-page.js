@@ -1,4 +1,6 @@
 export default loadpage;
+import cheese from './cheesecake-background.png';
+import loadhome from './load-home.js';
 
 function loadpage() {
     const content = document.querySelector('#content');
@@ -20,7 +22,6 @@ function loadpage() {
         "Home", "Menu", "Contact"
     ];
     buttons.forEach(function(element) {
-        //console.log(element);
         const tab = document.createElement('a');
         tab.innerHTML = element;
         subheader.appendChild(tab);
@@ -28,4 +29,15 @@ function loadpage() {
         tab.setAttribute('value', element);
         tab.href = "";
     })
+
+    /* Background */
+     /*
+    Absolute position will not work here as it can not extend past its parent.
+    */
+    const background = document.createElement('img');
+    background.src = cheese;
+    background.classList.add('background');
+    document.body.appendChild(background);
+ 
+   
 }
