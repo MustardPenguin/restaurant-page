@@ -31,9 +31,6 @@ function loadpage() {
     })
 
     /* Background */
-     /*
-    Absolute position will not work here as it can not extend past its parent.
-    */
     const background = document.createElement('img');
     background.src = cheese;
     background.classList.add('background');

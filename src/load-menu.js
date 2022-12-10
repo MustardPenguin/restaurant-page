@@ -1,10 +1,22 @@
 export default loadmenu;
 
-function createMenuItem(title, description, image) {
+import oreo from './oreo.png';
+
+function createMenuItem(title, image) {
     const grid = document.querySelector('.grid');
     const menuItem = document.createElement('div');
     menuItem.classList.add('menuItem');
     grid.appendChild(menuItem);
+
+    const menuImage = document.createElement('img');
+    menuImage.src = image;
+    menuImage.classList.add('menuImage');
+    menuItem.appendChild(menuImage);
+
+    const menuTitle = document.createElement('div');
+    menuTitle.innerText = title;
+    menuTitle.classList.add('menuTitle');
+    menuItem.appendChild(menuTitle)
 }
 
 function loadmenu() {
@@ -20,6 +32,6 @@ function loadmenu() {
 
     
     for(let i = 0; i < 6; i++) {
-        createMenuItem("Test", "", "");
+        createMenuItem("Cake", oreo);
     }
 }

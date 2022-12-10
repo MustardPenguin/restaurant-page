@@ -9,9 +9,8 @@
 }
 
 /* Setup */
-
 .background {
-    position: absolute;
+    position: fixed;
     min-height: 100%;
     width: 100%;
     z-index: -1;
@@ -73,15 +72,13 @@
     background-color: rgba(0, 0, 0, .5);
     
     margin-top: 48px;
+    margin-bottom: 48px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.holder div:first-child {
-    padding-top: 36px;
-}
 
 .text {
     padding-bottom: 36px;
@@ -92,13 +89,36 @@
 /* Menu */
 .grid {
     display: grid;
-    gap: 12px;
+    gap: 18px;
     width: 90%;
-    min-height: 1000px;
+    min-height: 800px;
     grid-template-columns: repeat(2, var(--grid-size));
     grid-template-rows: repeat(3, var(--grid-size));
+
+    padding-top: 24px;
+    padding-bottom: 36px;
 }
 
 .menuItem {
-    background-color: aqua;
+    background-color: rgba(61, 58, 58, 0.85);
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 16px;
+}
+
+.menuImage {
+    width: 225px;
+    height: 200px;
+    border-radius: 12px;;
+}
+
+.menuTitle {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    padding-top: 6px;
 }
